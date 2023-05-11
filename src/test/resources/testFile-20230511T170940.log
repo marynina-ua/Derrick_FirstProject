@@ -1,0 +1,28 @@
+17:09:40 [main] info 112 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Acer\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
+
+17:09:40 [main] initBrowser 57 INFO  test_Derrick686Site.TestBase - logger Initialise BeforeSuite: initBrowser()
+17:09:51 [main] oneClientByClientName_billye 81 INFO  test_Derrick686Site.TestBase - Running oneClientByClientName_billye test
+17:09:51 [main] oneClientByClientName_billye 85 INFO  test_Derrick686Site.TestBase - Searching for clients with a random company name: billye
+17:09:53 [main] oneClientByClientName_billye 89 INFO  test_Derrick686Site.TestBase - Found 1 results. Expected: 1
+17:09:53 [main] oneClientByClientName_billye 92 INFO  test_Derrick686Site.TestBase - Searching for one client billye displayed, Loree and Lucie not displayed
+17:09:53 [main] oneClientByClientName_billye 96 INFO  test_Derrick686Site.TestBase - Test oneClientByClientName_billye finished, passed
+17:09:55 [main] oneClientByClientName_lucie 102 INFO  test_Derrick686Site.TestBase - Running oneClientByClientName_lucie test
+17:09:55 [main] oneClientByClientName_lucie 106 INFO  test_Derrick686Site.TestBase - Searching for clients with a random company name: lucie
+17:09:57 [main] oneClientByClientName_lucie 110 INFO  test_Derrick686Site.TestBase - Found 2 results. Expected: 1
+17:09:57 [main] makingScreenShots 123 ERROR test_Derrick686Site.TestBase - Failed test: oneClientByClientName_luciescreenshot: C:\ПРОЕКТЫ\Подготовить для Гита Проекты\DerrickProject\src\test\resources\screenshots\screen1683817797667.png
+17:09:58 [main] oneClientByCompanyName_Montag 61 INFO  test_Derrick686Site.TestBase - Running oneClientByCompanyName_Montag test
+17:09:58 [main] oneClientByCompanyName_Montag 65 INFO  test_Derrick686Site.TestBase - Searching for clients with a random company name: Montag
+17:10:00 [main] oneClientByCompanyName_Montag 69 INFO  test_Derrick686Site.TestBase - Found 2 results. Expected: 2
+17:10:00 [main] oneClientByCompanyName_Montag 71 INFO  test_Derrick686Site.TestBase - Searching for clients Lucie and billye displayed, Loree not displayed
+17:10:00 [main] oneClientByCompanyName_Montag 75 INFO  test_Derrick686Site.TestBase - Test oneClientByCompanyName_Montag finished, passed
+17:10:01 [main] oneClientByCompanyName_Worman 41 INFO  test_Derrick686Site.TestBase - Running oneClientByCompanyName_Worman test
+17:10:01 [main] oneClientByCompanyName_Worman 45 INFO  test_Derrick686Site.TestBase - Searching for clients with a random company name: Worman
+17:10:03 [main] oneClientByCompanyName_Worman 49 INFO  test_Derrick686Site.TestBase - Found 1 results. Expected: 1
+17:10:03 [main] oneClientByCompanyName_Worman 51 INFO  test_Derrick686Site.TestBase - Searching for one client Lucie displayed, Loree not displayed
+17:10:03 [main] oneClientByCompanyName_Worman 55 INFO  test_Derrick686Site.TestBase - Test oneClientByCompanyName_Worman finished, passed
+17:10:04 [main] searchClientsByCompanyNegative 28 INFO  test_Derrick686Site.TestBase - Running searchClientsByCompanyNegative test
+17:10:04 [main] searchClientsByCompanyNegative 31 INFO  test_Derrick686Site.TestBase - Searching for a company with a random company name: 21274
+17:10:06 [main] searchClientsByCompanyNegative 36 INFO  test_Derrick686Site.TestBase - Error message is found on page, passed test searchClientsByCompanyNegative
+17:10:07 [main] logOut 136 INFO  test_Derrick686Site.TestBase - AfterTest DONE
+17:10:07 [main] closeBrowser 65 INFO  test_Derrick686Site.TestBase - After Suite logger

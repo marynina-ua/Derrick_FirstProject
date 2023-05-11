@@ -1,0 +1,11 @@
+16:35:18 [main] info 112 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Acer\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
+
+16:35:18 [main] initBrowser 57 INFO  test_Derrick686Site.TestBase - logger Initialise BeforeSuite: initBrowser()
+16:35:21 [main] setUp 16 INFO  test_Derrick686Site.TestBase - Starting BeforeMethod positiveTestwith data: []
+16:35:26 [main] setUp 16 INFO  test_Derrick686Site.TestBase - Starting BeforeMethod negativeTestwith data: []
+16:35:30 [main] setUp 16 INFO  test_Derrick686Site.TestBase - Starting BeforeMethod goodAuthAfterBadwith data: []
+16:35:38 [main] setUp 16 INFO  test_Derrick686Site.TestBase - Starting BeforeMethod goodAuthAfterBadWithRecorderwith data: []
+16:35:38 [main] startRecording 162 INFO  test_Derrick686Site.TestBase - Starting screen recording
+16:35:46 [main] stopRecoding 177 INFO  test_Derrick686Site.TestBase - Stopping screen recording
+16:35:51 [main] closeBrowser 65 INFO  test_Derrick686Site.TestBase - After Suite logger
