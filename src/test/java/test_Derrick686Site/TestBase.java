@@ -49,20 +49,22 @@ public class TestBase {
     public static final String ERROR_MESSAGE = "Invalid email or password";
     WebDriver wd;
 
-//todo------------------------------------- @BeforeSuite-------@AfterSuite ----------------------------------------------
+//------------------------------------- @BeforeSuite-------@AfterSuite ---------------------------------------------
 
     @BeforeSuite(alwaysRun=true)
     public void initBrowser() {
-                    System.out.println("sout Initialise BeforeSuite: initBrowser()");
-                    logger.info("logger Initialise BeforeSuite: initBrowser()");
+        System.out.println("sout Initialise BeforeSuite: initBrowser()");
+        logger.info("logger Initialise BeforeSuite: initBrowser()");
+
         wd = new FirefoxDriver();
         wd.manage().window().maximize();
     }
 
     @AfterSuite
     public void closeBrowser(){
-                    System.out.println("Finish AfterSuit: closeBrowser()");
-                    logger.info("After Suite logger");
+        System.out.println("Finish AfterSuit: closeBrowser()");
+        logger.info("After Suite logger");
+
         wd.close();
         wd.quit();
     }
@@ -70,6 +72,7 @@ public class TestBase {
 
 
 //todo------------------------------------------------ МЕТОДЫ ---------------------------------------------------------
+
     public void Auth(String email, String password) throws InterruptedException {
         field(By.id(XPATH_EMAIL_LOGIN_FIELD), email);
         field(By.id(XPATH_PASSWORD_LOGIN_FIELD), password);
@@ -83,6 +86,7 @@ public class TestBase {
         fieldInput.click();
         fieldInput.sendKeys(key);
     }
+
     public void button(By by) {
         WebElement button = wd.findElement(by);
         button.click();
@@ -92,7 +96,7 @@ public class TestBase {
         Thread.sleep(time);
     }
 
-    public Boolean searchInPageSource(String text){ // метод contains можно использовать
+    public Boolean searchInPageSource(String text){
         return wd.getPageSource().contains(text);
     }
 
@@ -117,8 +121,7 @@ public class TestBase {
 
 
 /** ----------------------------------------- DATAPROVIDER ---------------------------------------------------*/
-//-----------------------------методы с учетом Использования DataProveder-----------------------------
-    public void authDataProvider(String usernameDP, String passwordDP) throws InterruptedException {
+ public void authDataProvider(String usernameDP, String passwordDP) throws InterruptedException {
         //Enter manager's email
         WebElement username = wd.findElement(By.id("sw-form-capture-email-input"));
         username.click();
@@ -140,7 +143,6 @@ public class TestBase {
 
 
 /** ---------------------------------------Screenshots y Records-------------------------------------------------*/
-
     public String takeScreenshot() {
         File tmp = ((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
         File screenshot = new File("src/test/resources/screenshots/screen"+System.currentTimeMillis()+".png");
@@ -197,23 +199,5 @@ public class TestBase {
         logger.info("Cleaned Records folder");
     }
 }
-
-
-
-
-
-
-
-//--------------------------------------------- ЗАМЕТКИ ---------------------------------------------------
-//    @AfterMethod logOut
-//    @AfterTest quit
-
-//                Способы проверки элементов на странице:
-//    WebElement element = wd.findElement(By.linkText("text"));        linkText
-//    WebElement element = wd.findElement(By.partialLinkText("text")); partialLinkText
-
-//    Assert.assertEquals(wd.getPageSource().contains(ERROR_MESSAGE),Boolean.TRUE);
-//    Assert.assertFalse(searchInPageSource("CLIENTS"));  //метод contains
-//    Assert.assertTrue(wd.findElements(By.partialLinkText("CLIENTS")).isEmpty()); //можно проверить что элемент отсутствует .isEmpty()
 
 

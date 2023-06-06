@@ -1,6 +1,6 @@
 package add;
 
-// 07.12.22 QA config of envir variable (Several browsers) Тему разобрать
+// 07.12.22 QA config of envir variable (Several browsers)
 public class ConfigurationOfEnvironment {
 
 /*  String browser;
@@ -35,4 +35,3 @@ public class ConfigurationOfEnvironment {
         //System.setProperty("webdriver.chrome.driver", "/Users/ilya/telran/Tools/chromedriver");
     } */
 }
-//

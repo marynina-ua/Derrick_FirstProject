@@ -17,30 +17,28 @@ public class LogInTest extends TestBase {
         wd.get(SITE_LOGIN_PAGE);
     }
 
-    @Test (priority = 1) // позитивный тест - проверяя наличие Сообщения подтверждения
+    @Test(priority = 1)
     public void positiveTest() throws InterruptedException {
         Auth(BILLYE_EMAIL, VALID_PASSWORD);
         Assert.assertEquals(wd.getPageSource().contains(CONFIRM_MESSAGE), Boolean.TRUE);
-        // ВЗЯТЬ ВО ВНИМАНИЕ СПОСОБ НИЖЕ:
         //Assert.assertEquals(searchInPageSource(CONFIRM_MESSAGE), Boolean.TRUE);
     }
 
-    @Test (priority = 2) // негативный тест - проверяя наличие Сообщения об ошибке
+    @Test(priority = 2)
     public void negativeTest() throws InterruptedException {
         Auth(BILLYE_EMAIL, INVALID_PASSWORD);
         Assert.assertEquals(wd.getPageSource().contains(ERROR_MESSAGE),Boolean.TRUE);
-        // ВЗЯТЬ ВО ВНИМАНИЕ СПОСОБ НИЖЕ:
         //Assert.assertEquals(searchInPageSource(ERROR_MESSAGE), Boolean.TRUE);
     }
 
-    @Test (priority = 3) //позитивный тест После негативного - проверяя наличие Сообщения подтверждения
+    @Test(priority = 3)
     public void goodAuthAfterBad() throws InterruptedException {
         negativeTest();
         wait(2000);
         positiveTest();
     }
 
-    @Test (priority = 4)//позитивный тест После негативного - проверяя наличие Сообщения подтверждения
+    @Test(priority = 4)
     public void goodAuthAfterBadWithRecorder() throws InterruptedException {
         startRecording();
         negativeTest();
@@ -54,5 +52,4 @@ public class LogInTest extends TestBase {
         System.out.println("AfterMethod SOUT");
     }
 }
-//
 

@@ -11,18 +11,18 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class AmountOfUsersTest extends TestBase {
 
-    @BeforeTest(alwaysRun=true) // БЫТЬ ЗАРЕГЕСТРИРОВАНЫМ ПОД ПОЛЬЗОВАТЕЛЕМ
+    @BeforeTest(alwaysRun=true)
     public void beSignIn() throws InterruptedException {
         wd.get(SITE_LOGIN_PAGE);
         Auth(BILLYE_EMAIL, VALID_PASSWORD);
     }
 
-    @BeforeMethod(alwaysRun=true) //БЫТЬ НА СТРАНИЦЕ CLIENTS
+    @BeforeMethod(alwaysRun=true)
     public void beOnClientPage(){
         wd.get(SITE_CLIENTS_PAGE);
     }
 
-    @Test // вводим неправильные данные и проверяем на содержание текста об ошибке
+    @Test
     public void searchClientsByCompanyNegative() throws InterruptedException {
         String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
         logger.info("Running "+methodName+" test");
@@ -35,6 +35,7 @@ public class AmountOfUsersTest extends TestBase {
         Assert.assertTrue(isErrorOnPage);
         logger.info("Error message is found on page, passed test "+methodName);
     }
+
     @Test
     public void oneClientByCompanyName_Worman() throws InterruptedException {
         String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
@@ -94,9 +95,9 @@ public class AmountOfUsersTest extends TestBase {
         Assert.assertFalse(searchInPageSource("loree@example.com"));
         Assert.assertTrue(searchInPageSource("billye@example.com")); //тут понятно что этот находится а те два не должны
         logger.info("Test "+methodName+" finished, passed");
-
     }
-    @Test //этот тест должен упасть
+
+    @Test
     public void oneClientByClientName_lucie() throws InterruptedException {
         String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
         logger.info("Running "+methodName+" test");
@@ -124,7 +125,7 @@ public class AmountOfUsersTest extends TestBase {
         }
     }
 
-    @AfterTest(alwaysRun=true)// сделать logOut
+    @AfterTest(alwaysRun=true)
     public void logOut(){
 
         try {

@@ -15,7 +15,6 @@ public class EveryUserLogInTest_withDataProvider extends TestBase {
         wd.get(SITE_LOGIN_PAGE);
     }
 
-    // ПРОВЕРЯЕТ НАЛИЧИЕ ССЫЛОК У ТРЕХ ЮЗЕРОВ
     @Test(dataProvider = "correctCredsFromCSV", dataProviderClass = DataProviders.class)
     public void positiveTestDP(String email, String pwd, String elementsTrue, String elementsFalse) throws InterruptedException{
         authDataProvider(email, pwd);

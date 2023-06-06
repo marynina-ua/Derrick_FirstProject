@@ -15,7 +15,7 @@ import java.util.List;
 
 public class DataProviders extends TestBase {
 
-    @DataProvider // ЗАХАРДКОДЖИН
+    @DataProvider
     public Iterator<Object[]> getWrongLoginData(){
         List<Object[]> list = new ArrayList<>();
 
@@ -26,7 +26,7 @@ public class DataProviders extends TestBase {
         return list.iterator();
     }
 
-    @DataProvider // ПРАВИЛЬНЫЕ ДАННЫЕ
+    @DataProvider
     public static Iterator<Object[]> correctCredsFromCSV() throws IOException{
         List<Object[]> list = new ArrayList<>();
 
@@ -44,11 +44,10 @@ public class DataProviders extends TestBase {
         return list.iterator();
     }
 
-    @DataProvider // НЕПРАВИЛЬНЫЕ ДАННЫЕ
+    @DataProvider
     public static Iterator<Object[]> wrongCredsFromCSV() throws IOException {
         List<Object[]> list = new ArrayList<>();
 
-//      BufferedReader - это способ чтения Файлов
         BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/wrong_creds.csv"));
 
         String line = reader.readLine(); //readLine - читать построчно
@@ -61,7 +60,6 @@ public class DataProviders extends TestBase {
         return list.iterator();
     }
 
-    // Документация - https://github.com/hemanthsridhar/testng-excel-dataprovider
     @DataProvider
     public Object[][] excelCorrectDataRead() throws Exception {
         ExtUtils ext = new ExcelUtils("src/test/resources/excelData.xlsx", "correctData");

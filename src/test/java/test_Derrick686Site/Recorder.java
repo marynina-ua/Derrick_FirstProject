@@ -33,4 +33,3 @@ public class Recorder extends ScreenRecorder {
                 + "." + Registry.getInstance().getExtension(fileFormat));
     }
 }
-//

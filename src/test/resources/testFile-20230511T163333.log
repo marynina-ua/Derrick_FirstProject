@@ -1,8 +1,0 @@
-16:33:34 [main] info 112 INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\Acer\AppData\Local\JetBrains\IdeaIC2023.1\temp-testng-customsuite.xml
-
-16:33:34 [main] initBrowser 57 INFO  test_Derrick686Site.TestBase - logger Initialise BeforeSuite: initBrowser()
-16:33:38 [main] managerAuthTest 19 INFO  test_Derrick686Site.TestBase - logger starting method: Auth(BILLYE_EMAIL, VALID_PASSWORD)
-16:33:43 [main] clientAuthTest 32 INFO  test_Derrick686Site.TestBase - starting method: Auth(LUCIE_EMAIL, VALID_PASSWORD)
-16:33:46 [main] consultantAuthTest 55 INFO  test_Derrick686Site.TestBase - starting method: Auth(EDRA_EMAIL, VALID_PASSWORD)
-16:33:50 [main] closeBrowser 65 INFO  test_Derrick686Site.TestBase - After Suite logger

@@ -1,14 +1,13 @@
 package add;
-/*TODO  Создаем документ в ресорсес     logback.xml
+/**     Создаем документ в resources    logback.xml
 
-        Импортируем в тестбейс:         import org.slf4j.Logger;
+        Импортируем в TestBase:         import org.slf4j.Logger;
                                         import org.slf4j.LoggerFactory;
 
-        Создаем в тест бейс объект:     final static Logger logger = LoggerFactory.getLogger(TestBaseFourth.class);
+        Создаем в TestBase объект:      final static Logger logger = LoggerFactory.getLogger(TestBaseFourth.class);
 
-        Исключаем логгер из тестнж в pom.xml
+        Исключаем logger из testNG в pom.xml
 */
-
 
 public class Logger {
 
